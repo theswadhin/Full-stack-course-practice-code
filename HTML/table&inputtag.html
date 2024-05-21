@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>SL no</th>
+            <th>institute</th>
+            <th>mark</th>
+        </tr>
+
+        <tr>
+            <th>1</th>
+            <th>lpu</th>
+            <th>72</th>
+        </tr>
+
+        <tr>
+            <th>2</th>
+            <th>jnv</th>
+            <th>90</th>
+        </tr>
+        <tr>
+            <th colspan="2">total mark</th>
+            <th>162</th>
+        </tr>
+    </table>
+    <br>
+
+    <form ><br>
+        <label for="fname" >Firstname</label>
+        <input type="text" name="fname"> 
+        <br><br>
+        <label for="lname">Lastname</label>
+        <input type="text" name="lname">
+        <br><br>
+        <label for="mail">Email</label>
+        <input type="text" name="mail">
+        <br><br>
+        <label for="upass">Password</label>
+        <input type="password" name="upass">
+        <br>
+        <h5>Select your gende:</h5>
+        <input type="radio" name="gender" value="male">
+        <label for="male">Male</label>
+        &nbsp;&nbsp;
+        <input type="radio" name="gender" value="female">
+        <label for="female">Female</label>
+        <br>
+        <h5>Date of Birth:</h5>
+        <input type="date" max="1999-12-31" name="dob" value="dob">
+
+        <h5>Select skills:</h5>
+        <input type="checkbox" name="skill" value="HTML">
+        <label>HTML</label>
+
+        <input type="checkbox" name="skill" value="CSS">
+        <label>CSS</label>
+
+        <input type="checkbox" name="skill" value="JavaScript">
+        <label>JavaScript</label>
+
+        <input type="checkbox" name="skill" value="ReactJS">
+        <label>ReactJS</label>     
+        <br>
+        <h5>Select your CV</h5>
+        <input type="file" name="myfile" accept="image/*, .pdf"><br><br>
+        <input type="submit" value="Signup">
+        
+        <input type="reset" value="clear">
+    </form>
+    
+</body>
+</html>
