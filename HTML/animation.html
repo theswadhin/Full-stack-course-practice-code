@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+        canvas{
+            background-color: #7dca30f9;
+            margin: 5px;
+          
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="cv" width="500" height="500"></canvas>
+    <script>
+        let canvas=document.getElementById("cv");
+        let ctx= canvas.getContext("2d");
+        canvas.width = window.innerWidth-100;
+
+        const circle={
+            x:100,
+            y:100,
+            radius:30,
+            dx:5,
+            dy:4
+        }
+        
+        function drawCircle(){
+            ctx.beginPath()
+            ctx.arc(circle.x,circle.y,circle.radius,0,Math.PI*2);
+            ctx.fillStyle ="red";
+            ctx.fill();
+            ctx.lineWidth=5;
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+        }
+
+        function update(){
+            ctx.clearRect(0,0,canvas.width,canvas.height)
+            drawCircle();
+            circle.x+=circle.dx;
+            circle.y+=circle.dy;
+
+            requestAnimationFrame(update);
+
+            if(circle.y+circle.radius>canvas.height || circle.y-circle.radius<0){
+                circle.dy*=-1;
+            }
+            if(circle.x+circle.radius>canvas.width || circle.x-circle.radius<0){
+                circle.dx*=-1;
+            }
+        }
+        update();
+
+
+    </script>
+</body>
+</html>

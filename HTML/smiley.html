@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+        canvas{
+            background-color: #ffff;
+            margin: 5px;
+          
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="cv" width="900" height="900"></canvas>
+    <script>
+        let canvas=document.getElementById("cv");
+        let ctx= canvas.getContext("2d");
+        canvas.width = window.innerWidth-100;
+
+        // smiley face
+        ctx.beginPath()
+        ctx.arc(300,300,200,0,Math.PI*2);
+        ctx.fillStyle ="yellow";
+        ctx.fill();
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        //eyes
+        ctx.beginPath()
+        ctx.arc(400,250,30,0,Math.PI*2);
+        ctx.fillStyle ="black";
+        ctx.fill();
+
+        ctx.beginPath()
+        ctx.arc(200,250,30,0,Math.PI*2);
+        ctx.fillStyle ="black";
+        ctx.fill();
+
+        //mouth
+        ctx.beginPath()
+        ctx.arc(300,350,70,0,Math.PI);
+        ctx.fillStyle ="black";
+        ctx.fill();
+
+        //teeth
+        ctx.beginPath()
+        ctx.moveTo(240,350);
+        ctx.lineTo(270,350);
+        ctx.lineTo(270,370);
+        ctx.lineTo(240,370);
+        ctx.fillStyle ="white";
+        ctx.fill();
+
+        ctx.beginPath()
+        ctx.moveTo(280,350);
+        ctx.lineTo(310,350);
+        ctx.lineTo(310,370);
+        ctx.lineTo(280,370);
+        ctx.fillStyle ="white";
+        ctx.fill();
+
+        ctx.beginPath()
+        ctx.moveTo(320,350);
+        ctx.lineTo(350,350);
+        ctx.lineTo(350,370);
+        ctx.lineTo(320,370);
+        ctx.fillStyle ="white";
+        ctx.fill();
+    </script>
+</body>
+</html>

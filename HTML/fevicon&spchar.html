@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- favicon -->
+    <link rel="icon" href="../images.jpg" type="image/x-icon">  
+</head>
+<body>
+    <!-- special character -->
+    <h1>&AMP;&comma;&apos;&comma;&gt;&comma;&lt;</h1>
+    
+    <!-- micro data -->
+    <h1>Products:</h1>
+    <div itemscope itemtype="https://schema.org/Product">
+        <h2 itemprop="name">Product name</h2>
+        <span itemprop="description">Product description</span>
+        <span itemprop="price">&dollar;30</span>
+    </div>
+    
+    <div itemscope itemtype="https://schema.org/Product">
+        <h2>Product name</h2>
+        <span>Product description</span>
+        <span>&dollar;30</span>
+    </div>
+</body>
+</html>

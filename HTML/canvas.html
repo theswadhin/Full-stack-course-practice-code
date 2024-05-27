@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas{
+            background-color: #ffff;
+            margin: 5px;
+            height: 80%;
+            width: 80%;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="cv">My canvas</canvas>
+</body>
+<script>
+    let canvas=document.getElementById("cv");
+    let ctx= canvas.getContext("2d");
+
+    ctx.fillStyle = "pink";
+    ctx.fillRect(20,20,80,20);
+    ctx.fillStyle = "blue";
+    ctx.fillRect(20,50,80,20);
+
+    ctx.lineWidth = 10;
+    ctx.strokeStyle="orange"
+    ctx.strokeRect(20,50,80,20);
+
+    
+</script>
+</html>
