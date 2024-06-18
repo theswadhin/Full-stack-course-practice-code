@@ -9,6 +9,6 @@ function abc(){
 }
 
 abc();
-//here by calling it will create a local context of function i.e memory willl be allocated again to variable.
+//here by calling it will create a local context of function i.e memory will be allocated again to variable.
 
 console.log(a);

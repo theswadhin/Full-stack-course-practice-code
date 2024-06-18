@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="myButton">Click me!</button>
+  <p id="myElement">Hover over me!</p>
+</body>
+<script>
+  const myButton = document.getElementById("myButton");
+
+  myButton.addEventListener("click", function(event) {
+    // Prevent the default behavior of the button
+    event.preventDefault();
+  
+    
+    console.log("Button clicked!");
+    myButton.textContent = "Clicked!";
+  
+    myButton.classList.add("clicked");      //adding css
+  
+    doSomethingElse();
+  });
+
+  function doSomethingElse() {
+    
+    const myElement = document.getElementById("myElement");
+  
+    myElement.addEventListener("mouseover", function(event) {
+      
+      myElement.style.backgroundColor = "blue";
+    });
+  
+    myElement.addEventListener("mouseout", function(event) {
+      myElement.style.backgroundColor = "white";
+    });
+  }
+
+</script>
+</html>
