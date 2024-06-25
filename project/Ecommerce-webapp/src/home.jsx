@@ -1,9 +1,19 @@
-import { useState } from "react";
-import Products from "./Data.js";
+import { useEffect, useState } from "react";
+//import Products from "./Data.js";
 import Productcard from "./Productcard";
 
 let home = () => {
-  // let [Products,setProduct]=useState([...Data])
+  let [allProducts,setProduct]=useState([])
+
+  let getData= async () => {
+    let Data=await fetch("https://dummyjson.com/products");
+    let obj=await Data.JSON();
+    setProduct(obj.allProducts);
+  }
+
+  useEffect(() => {
+    getData();
+  },[]);
 
   // const handleRating=()=>{
 
@@ -52,7 +62,7 @@ let home = () => {
       </div>
 
       <div className="flex flex-wrap justify-around">
-        {Products.map((obj) => {
+        {allProducts.map((obj) => {
           return <Productcard obj={obj}></Productcard>;
         })}
       </div>
