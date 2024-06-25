@@ -1,0 +1,19 @@
+
+
+<html>
+<head>
+	<title>DOM Example</title>
+    <!-- <script defer src="./domexample.js"></script> -->
+</head>
+<body>
+	<h1 id="myHeading">Original Heading Text</h1>
+	<button onclick="changeText()">Click me to change the heading text</button>
+
+    <script>
+		function changeText() {
+			var heading = document.getElementById("myHeading");
+			heading.innerHTML = "New Heading Text";
+		}
+	</script>
+</body>
+</html>

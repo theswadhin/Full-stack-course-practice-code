@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <h1>Grandchild</h1>
+        </div>
+        <div class="child">
+            <h1>Grandchild</h1>
+        </div>
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script >
+        let gc1= React.createElement("h1",{class:"parent" ,class :"child"},"Grandchild1");
+        let gc2= React.createElement("h1",{class:"parent" ,class :"child"},"Grandchild2");
+        //console.log(reactEle);
+        let root=ReactDOM.createRoot(document.getElementById("root"));
+        let par=ReactDOM.createRoot(document.getElementsByClassName("parent"));
+        let cld=ReactDOM.createRoot(document.getElementsByClassName("child"));
+        
+        root.render(reactEle);
+        cld.render(gc1);
+        cld.render(gc2);
+    </script>
+</body>
+</html>
